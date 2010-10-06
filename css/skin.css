@@ -1,0 +1,115 @@
+/* skin */
+
+.skin_container {
+  /* Act as position parent */
+  position: relative;
+  
+  background-color: rgb(240,240,240);
+  border: 1px solid rgb(220,220,220);
+  
+  -webkit-border-radius: 0.2em;
+     -moz-border-radius: 0.2em;
+          border-radius: 0.2em;
+  
+  -webkit-box-shadow: 0 2px 3px rgba(63,63,63,0.4) inset;
+     -moz-box-shadow: 0 2px 3px rgba(63,63,63,0.4) inset;
+          box-shadow: 0 2px 3px rgba(63,63,63,0.4) inset;
+}
+
+.y_skin_container {
+  /* Out-fox CSS inheritance by putting
+     this before x_skin_container... */
+  width: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.x_skin_container {
+  height: 0.5em;
+  /*width: 100%;*/
+  
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.y_skin_container {
+  /* ...and this after. */
+  /*height: 14em;*/
+}
+
+.skin {
+  position: absolute;
+ 
+  min-width: 10px;
+  min-height: 10px;
+  
+  width: 1em;
+  height: 1em;
+  
+  background-color: rgb(200,200,200);
+  border: 1px solid rgb(100,100,100);
+  
+  -webkit-border-radius: 1em;
+     -moz-border-radius: 1em;
+          border-radius: 1em;
+  
+  -webkit-box-shadow: 0 2px 4px rgba(63,63,63,0.3), 0 3px 5px white inset;
+     -moz-box-shadow: 0 2px 4px rgba(63,63,63,0.3), 0 3px 5px white inset;
+          box-shadow: 0 2px 4px rgba(63,63,63,0.3), 0 3px 5px white inset;
+}
+
+.x_skin {
+  /* Again, out-fox CSS inheritance by putting
+     this before y_skin... */
+  top: -0.25em;
+  /* Compensate for border-width of container. */
+  margin-top: -1px;
+}
+
+.y_skin {
+  left: -0.25em;
+  top: 0;
+  /* Compensate for border-width of container. */
+  margin-left: -1px;
+  margin-top: 0;
+}
+
+.x_skin {
+  /* ...and this after. */
+  left: 0;
+  margin-left: 0;
+}
+
+.rotate_skin_container,
+.rotate_skin {
+  width: 5em;
+  height: 5em;
+  
+  -webkit-border-radius: 2.5em;
+     -moz-border-radius: 2.5em;
+          border-radius: 2.5em;
+}
+
+.rotate_skin {
+  left: -1px;
+  top: -1px;
+  
+  background-color: transparent;
+  background-image: url('images/dot.png');
+  background-repeat: no-repeat;
+  background-position: 50% 10%;
+  
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+.rotate_skin_container {
+  background-color: rgb(200,200,200);
+  
+  -webkit-box-shadow: 0 2px 4px rgba(63,63,63,0.3), 0 3px 5px white inset;
+     -moz-box-shadow: 0 2px 4px rgba(63,63,63,0.3), 0 3px 5px white inset;
+          box-shadow: 0 2px 4px rgba(63,63,63,0.3), 0 3px 5px white inset;
+  margin-left: auto;
+  margin-right: auto;
+}

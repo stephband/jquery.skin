@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xhtml" class="transition_support"><head>
+    <meta content="application/xhtml+xml; charset=utf-8" http-equiv="Content-Type">
+    <meta content="chrome=1" http-equiv="X-UA-Compatible">
+
+    <title>webdev.stephband.info - jQuery Skin</title>
+    <link href="http://assets.stephband.info/css/webcss.css" media="all" rel="stylesheet" type="text/css">
+    <link href="http://assets.stephband.info/css/site.layout.css" media="all" rel="stylesheet" type="text/css">
+    <link href="http://assets.stephband.info/css/site.typography.css" media="all" rel="stylesheet" type="text/css">
+    <link href="css/skin.css" media="all" rel="stylesheet" type="text/css">
+    
+    <style>
+      body{
+        padding-bottom: 3em;
+      }
+      
+      .site_wrap {
+        margin-bottom: ;
+      }
+      
+      .type_wrap {
+        font-family: 'Georgia';
+        margin-bottom: 2.5714em;
+      }
+      
+      
+      
+      h2 {
+        font-size: 1.25em;
+        margin-top: 2.2em;
+        height: 1em;
+      }
+      
+      pre {
+        padding: 0.8333em;
+        margin: 0 0 0.8571em 0;
+        background: rgb(230,220,190);
+        
+        -webkit-border-radius: 0.3333em;
+           -moz-border-radius: 0.3333em;
+                border-radius: 0.3333em;
+        
+        overflow: hidden;
+        letter-spacing: -1px;
+        
+        font-size: 1.0833em;
+      }
+      
+      /* skin */
+      
+      .skin_container {
+        /* Act as position parent */
+        position: relative;
+        
+        background-color: rgb(240,240,240);
+        border: 1px solid rgb(220,220,220);
+        
+        -webkit-border-radius: 0.2em;
+           -moz-border-radius: 0.2em;
+                border-radius: 0.2em;
+        
+        -webkit-box-shadow: 0 2px 3px rgba(63,63,63,0.4) inset;
+           -moz-box-shadow: 0 2px 3px rgba(63,63,63,0.4) inset;
+                box-shadow: 0 2px 3px rgba(63,63,63,0.4) inset;
+      }
+      
+      .y_skin_container {
+        /* Out-fox CSS inheritance by putting
+           this before x_skin_container... */
+        width: 0.5em;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .x_skin_container {
+        height: 0.5em;
+        width: 100%;
+        
+        margin-left: 0em;
+        margin-right: 0em;
+        margin-top: 0.6667em;
+        margin-bottom: 0.6667em;
+      }
+      
+      .y_skin_container {
+        /* ...and this after. */
+        height: 14em;
+      }
+      
+      .skin {
+        position: absolute;
+       
+        min-width: 10px;
+        min-height: 10px;
+        
+        width: 1em;
+        height: 1em;
+        
+        background-color: rgb(200,200,200);
+        border: 1px solid rgb(100,100,100);
+        
+        -webkit-border-radius: 1em;
+           -moz-border-radius: 1em;
+                border-radius: 1em;
+        
+        -webkit-box-shadow: 0 2px 4px rgba(63,63,63,0.3), 0 3px 5px white inset;
+           -moz-box-shadow: 0 2px 4px rgba(63,63,63,0.3), 0 3px 5px white inset;
+                box-shadow: 0 2px 4px rgba(63,63,63,0.3), 0 3px 5px white inset;
+      }
+      
+      
+      .x_skin {
+        /* Out-fox CSS inheritance by putting
+           this before y_skin... */
+        top: -0.25em;
+        /* Compensate for border-width of container. */
+        margin-top: -1px;
+      }
+      
+      .y_skin {
+        left: -0.25em;
+        top: 0;
+        /* Compensate for border-width of container. */
+        margin-left: -1px;
+        margin-top: 0;
+      }
+      
+      .x_skin {
+        /* ...and this after. */
+        left: 0;
+        margin-left: 0;
+      }
+      
+      .rotate_skin_container,
+      .rotate_skin {
+        width: 5em;
+        height: 5em;
+        
+        -webkit-border-radius: 2.5em;
+           -moz-border-radius: 2.5em;
+                border-radius: 2.5em;
+      }
+      
+      .rotate_skin {
+        left: -1px;
+        top: -1px;
+        
+        background-color: transparent;
+        background-image: url('images/dot.png');
+        background-repeat: no-repeat;
+        background-position: 50% 10%;
+        
+        -webkit-box-shadow: none;
+           -moz-box-shadow: none;
+                box-shadow: none;
+      }
+      
+      .rotate_skin_container {
+        background-color: rgb(200,200,200);
+        
+        -webkit-box-shadow: 0 2px 4px rgba(63,63,63,0.3), 0 3px 5px white inset;
+           -moz-box-shadow: 0 2px 4px rgba(63,63,63,0.3), 0 3px 5px white inset;
+                box-shadow: 0 2px 4px rgba(63,63,63,0.3), 0 3px 5px white inset;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .xrotate_skin,
+      .rotate_skin {
+  			background-image: url('images/dot.png');
+    	}
+    	
+    	.xrotate_skin {
+    		width: 4em;
+    		height: 4em;
+    		
+    		margin-top: -1.8em;
+    		
+    		background-position: 50% 16%;
+    		
+    		background-repeat: no-repeat;
+    	}
+    	
+    	.mahem_skin_container {
+    		height: 24em;
+    	}
+    	
+    	.scroll {
+    		width: 100%;
+    		height: 16em;
+    		border: 1px solid rgb(220,220,220);
+    		padding: 1em;
+    	}
+    	
+    	.y_scroll {
+    		overflow-x: hidden;
+    		overflow-y: auto;
+    		
+    		width: 90%;
+    	}
+    	
+    	.x_scroll {
+    		overflow-x: auto;
+    		overflow-y: hidden;
+    		
+    		white-space: nowrap;
+    	}
+    	
+    	.xy_scroll {
+    		white-space: nowrap;
+    	}
+    	
+    	.xy_scroll_2 {
+    		white-space: nowrap;
+    		width: 50%;
+    		height: 60%;
+    		overflow: hidden;
+    	}
+    	
+    	.scroll_y_skin_container {
+    		float: right;
+    		height: 16em;
+    	}
+    	
+    	.scroll_xy_skin_container {
+    		height: 13.6em;
+    		margin: 0;
+    	}
+    </style>
+</head>
+    
+<body>
+
+<div class="type_wrap site_wrap wrap">
+	<h1>jQuery Skin</h1>
+	
+  <div class="column of_three">
+    
+    <h2>skinX</h2>
+    <pre>jQuery('.skin').skinX('input', 'value');</pre>
+    <input id="x_input" class="x_input" type="range" min="0" max="2" step="0.01" value="0.4" />
+    <div class="x_skin_container skin_container container">
+      <div id="x_skin" class="x_skin skin"></div>
+    </div>
+    
+    <h2>skinY</h2>
+    <pre>jQuery('.skin').skinY('input', 'value');</pre>
+    <input id="y_input" class="y_input" type="range" min="0" max="2" step="0.01" value="0.4" />
+    <div class="y_skin_container skin_container container">
+      <div id="y_skin" class="y_skin skin"></div>
+    </div>
+    
+    <h2>skinX, skinY</h2>
+    <pre>jQuery('.skin')
+.skinX('inputX', 'value')
+.skinY('inputY', 'value');</pre>
+    <div class="x_skin_container y_skin_container skin_container container">
+      <div id="xy_skin" class="x_skin y_skin skin"></div>
+    </div>
+    
+  </div
+ ><div class="column of_three">
+    
+    <h2>skinWidth</h2>
+    <pre>jQuery('.skin').skinWidth('input', 'value');</pre>
+    <input id="width_input" class="width_input" type="range" min="0" max="2" step="0.01" value="0.4" />
+    <div class="x_skin_container skin_container container">
+      <div id="width_skin" class="x_skin skin"></div>
+    </div>
+    
+    <h2>skinHeight</h2>
+    <pre>jQuery('.skin').skinHeight('input', 'value');</pre>
+    <input id="height_input" class="height_input" type="range" min="0" max="2" step="0.01" value="0.4" />
+    <div class="y_skin_container skin_container">
+      <div id="height_skin" class="y_skin skin"></div>
+    </div>
+    
+    <h2>skinWidth, skinHeight</h2>
+    <pre>jQuery('.skin')
+.skinWidth('input', 'value', { response: 'distance' }),
+.skinHeight('input', 'value', { response: 'distance' });</pre>
+    <div class="x_skin_container y_skin_container skin_container container">
+      <div id="widthheight_skin" class="x_skin y_skin skin"></div>
+    </div>
+    
+  </div
+ ><div class="column of_three">
+    
+    <h2>skinRotate</h2>
+    <pre>jQuery('.skin').skinRotate('input', 'value');</pre>
+    <input id="rotate_input" class="rotate_input" type="range" min="0" max="2" step="0.01" value="1" />
+    <div class="rotate_skin_container skin_container">
+      <div id="rotate_skin" class="rotate_skin skin"></div>
+    </div>
+
+    <h2>skinX, skinWidth</h2>
+    <pre>jQuery('.skin')
+.skinX('input', 'value', { response: 'x' })
+.skinWidth('input', 'value', { response: 'y' });</pre>
+    <div class="x_skin_container skin_container container">
+      <div id="xwidth_skin" class="x_skin skin"></div>
+    </div>
+    
+    <h2>skinX, skinRotate</h2>
+    <pre>jQuery('.skin')
+.skinX('input', 'value', { response: 'x' })
+.skinRotate('input', 'value', { response: 'y' });</pre>
+    <div class="x_skin_container skin_container container">
+      <div id="xrotate_skin" class="xrotate_skin x_skin skin"></div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="type_wrap site_wrap wrap">
+    <h2>Sheer Mahem</h2>
+    <pre>jQuery('.skin')
+.skinX(jQuery('#mahem_x'), 'value', { response: 'x' })
+.skinY(jQuery('#mahem_y'), 'value', { response: 'y' })
+.skinWidth(jQuery('#mahem_width'), 'value', { response: 'x' })
+.skinHeight(jQuery('#mahem_height'), 'value', { response: 'x', mouseMap: 'invert' })
+.skinRotate( jQuery('#mahem_rotate'), 'value', { response: 'y' });</pre>
+    
+    <div class="column of_five"><input id="mahem_x_input" type="range" min="0" max="2" step="0.01" value="1.2" /></div
+   ><div class="column of_five"><input id="mahem_y_input" type="range" min="0" max="2" step="0.01" value="0.4" /></div
+   ><div class="column of_five"><input id="mahem_width_input" type="range" min="0" max="2" step="0.01" value="0.9" /></div
+   ><div class="column of_five"><input id="mahem_height_input" type="range" min="0" max="2" step="0.01" value="0.5" /></div
+   ><div class="last column of_five"><input id="mahem_rotate_input" type="range" min="0" max="2" step="0.01" value="1.1" /></div>
+   
+    <div class="x_skin_container mahem_skin_container skin_container container">
+      <div id="mahem_skin" class="xrotate_skin x_skin skin"></div>
+    </div>
+</div>
+
+<div class="type_wrap site_wrap wrap">
+	<div class="column of_three">
+		<h2>skinX, skinWidth</h2>
+    <pre>jQuery('.skin')
+.skinX('scroller', 'scrollLeft')
+.skinWidth('scroller', 'scrollWidth');</pre>
+		<div id="x_scroll" class="x_scroll scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    <div class="x_skin_container skin_container container">
+      <div id="x_scroll_skin" class="x_skin skin"></div>
+    </div>
+	</div
+ ><div class="column of_three">
+		<h2>skinY, skinHeight</h2>
+    <pre>jQuery('.skin')
+.skinY('scroller', 'scrollTop')
+.skinHeight('scroller', 'scrollHeight');</pre>
+		<div class="horizontal">
+			<div id="y_scroll" class="y_scroll scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    	<div class="scroll_y_skin_container y_skin_container skin_container container">
+    	  <div id="y_scroll_skin" class="y_skin skin"></div>
+    	</div>
+    </div>
+	</div
+ ><div class="column of_three">
+		<h2>skinX, skinWidth, skinY, skinHeight</h2>
+    <pre>jQuery('.skin')
+.skinX('scroller', 'scrollLeft')
+.skinWidth('scroller', 'scrollWidth')
+.skinY('scroller', 'scrollTop')
+.skinHeight('scroller', 'scrollHeight');</pre>
+    <div class="scroll_xy_skin_container x_skin_container y_skin_container skin_container container">
+      <div id="xy_scroll_skin" class="x_skin y_skin skin"></div>
+    </div>
+	</div>
+</div>
+
+<div class="type_wrap site_wrap wrap">
+	<div class="double_column column of_three">
+    <h2>Oooo. Aaaah.</h2>
+    <pre>jQuery('.skin')
+.skinX('.skin', 'scrollLeft')
+.skinWidth('.skin', 'scrollWidth')
+.skinY('.skin', 'scrollTop')
+.skinHeight('.skin', 'scrollHeight');</pre>
+    <div class="x_skin_container y_skin_container skin_container container">
+      <div id="xy_scroll_skin_2" class="x_skin y_skin skin xy_scroll_2 scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt<br/>ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br/>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt<br/>ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br/>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt<br/>ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br/>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt<br/>ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br/>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    </div>
+  </div>
+</div>
+
+    <header class="site_header_panel header_panel panel" id="page_header">
+      <div class="site_header_wrap header_wrap wrap">
+        <a href="http://stephband.info" title="stephband" rel="index"><h1 class="site_logo_thumb logo_thumb thumb">stephband.info</h1></a>
+        
+        <ul class="horizontal site_nav_index nav_index index">
+          <li><a href="http://stephband.info" class="nav_tab_button tab_button button">blog</a></li><li><a href="http://webdev.stephband.info" class="nav_tab_button tab_button button">webdev</a></li><li><a href="http://twitter.com/stephband" class="twitter_button button" rel="external">Twitter</a></li>
+        </ul>
+      </div>
+    </header>
+
+   	<!-- scripts -->
+   	<script src="../js/jquery-1.4.2.js" type="text/javascript"></script>
+    <script src="js/jquery.skin.js" type="text/javascript"></script>
+    <script>
+			jQuery(document).ready(function(){
+				
+				jQuery('#x_scroll_skin')
+				.skinX('#x_scroll', 'scrollLeft')
+				.skinWidth('#x_scroll', 'scrollWidth');
+				
+				jQuery('#y_scroll_skin')
+				.skinY('#y_scroll', 'scrollTop')
+				.skinHeight('#y_scroll', 'scrollHeight');
+				
+				jQuery('#xy_scroll_skin')
+				.skinX('#x_scroll', 'scrollLeft')
+				.skinWidth('#x_scroll', 'scrollWidth')
+				.skinY('#y_scroll', 'scrollTop')
+				.skinHeight('#y_scroll', 'scrollHeight');
+				
+				jQuery('#xy_scroll_skin_2')
+				.skinX('#xy_scroll_skin_2', 'scrollLeft')
+				.skinY('#xy_scroll_skin_2', 'scrollTop');
+				
+				jQuery('#x_skin')
+				.skinX(jQuery('#x_input'), 'value', {
+					response: 'x'
+				});
+				
+				jQuery('#y_skin')
+				.skinY(jQuery('#y_input'), 'value', {
+					response: 'y',
+					map: 'invert'
+				});
+  		
+				jQuery('#xy_skin')
+				.skinX(jQuery('#x_input'), 'value')
+				.skinY(jQuery('#y_input'), 'value', { map: 'invert' });
+				
+				jQuery('#width_skin')
+				.skinWidth(jQuery('#width_input'), 'value');
+				
+				jQuery('#height_skin')
+				.skinHeight(jQuery('#height_input'), 'value');
+				
+				jQuery('#widthheight_skin')
+				.skinWidth(jQuery('#width_input'), 'value')
+				.skinHeight(jQuery('#height_input'), 'value');
+				
+				jQuery('#rotate_skin')
+				.skinRotate(jQuery('#rotate_input'), 'value', { reverse: true });
+				
+				jQuery('#xwidth_skin')
+				.skinX(jQuery('#x_input'), 'value', { response: 'x' } )
+				.skinWidth(jQuery('#width_input'), 'value', { response: 'y', reverse: true });
+				
+				jQuery('#xrotate_skin')
+				.skinX(jQuery('#x_input'), 'value', { response: 'x' } )
+				.skinRotate( jQuery('#rotate_input'), 'value', { response: 'y', reverse: true });
+				
+				jQuery('#mahem_skin')
+				.skinX(jQuery('#mahem_x_input'), 'value', { response: 'x' })
+				.skinY(jQuery('#mahem_y_input'), 'value', { response: 'y' })
+				.skinWidth(jQuery('#mahem_width_input'), 'value', { response: 'x' })
+				.skinHeight(jQuery('#mahem_height_input'), 'value', { response: 'x', map: 'invert' })
+				.skinRotate( jQuery('#mahem_rotate_input'), 'value', { response: 'y' });
+			});
+    </script>
+</body>
+</html>
