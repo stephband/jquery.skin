@@ -527,7 +527,7 @@
 							data.reset();
 						});
 						
-						win
+						doc
 						.bind('mouseup.skin', dragstop);
 					});
 				});
